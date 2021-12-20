@@ -1,0 +1,27 @@
+<h4 class="text-center"> List of Expenses</h4>
+<hr>
+<div class="row" style="margin-top: 40px;">
+    
+    <div class="col-lg-6">
+        <div class="alert alert-success size-alert" >
+            Budget: <strong>{{budget}}</strong>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="size-alert" [ngClass]="applycolor()">
+            Residue: <strong>{{residue}}</strong>
+        </div>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between"  *ngFor="let myexpense of listExpenses">
+                <strong>{{myexpense.name}}</strong>
+                <span class="badge rounded-pill bg-secondary">${{myexpense.quantity}}</span>
+            </li>
+
+        </ul>
+    </div>
+</div>

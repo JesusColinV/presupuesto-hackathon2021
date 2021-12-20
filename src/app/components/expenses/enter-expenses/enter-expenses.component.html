@@ -1,0 +1,14 @@
+<h4>Enter budget</h4>
+<hr>
+<div class="text-center" *ngIf="error">
+    <span class="badge bg-danger text-error">{{texterror}}</span>
+</div>
+<div class="form-goupmt-2">
+    <label for="expense">Expense</label>
+    <input type="text" [(ngModel)]="name" id="expense" class="form-control form-control-lg" placeholder="example: foot">
+</div>
+<div class="form-goup mt-2">
+    <label for="quantity">Quantity</label>
+    <input type="number" [(ngModel)]="quantity" id="quantity" class="form-control form-control-lg" placeholder="example: 5">
+</div>
+<button class="btn btn-secondary btn-lg btn-block mt-5" (click)="addExpense()"> Agg expense </button>
